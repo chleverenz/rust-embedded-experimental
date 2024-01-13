@@ -1,0 +1,1 @@
+put bits to a 23017 which is connected via I2C bus to the arduino. Totally plain, no magic :-)
