@@ -1,0 +1,29 @@
+[package]
+name = "rust-embedded-experimental"
+version = "0.1.0"
+description = "some startercode for getting rust running on an arduino"
+licence = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+panic-halt = "0.2.0"
+ufmt = "0.2.0"
+nb = "1.1.0"
+
+[dependencies.arduino-hal]
+git = "https://github.com/Rahix/avr-hal"
+rev = "ab3e462"
+features = ["arduino-nano"]
+
+[profile.dev]
+panic = "abort"
+lto = true
+opt-level = "s"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+debug = true
+lto = true
+opt-level = "s"
