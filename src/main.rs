@@ -30,7 +30,7 @@ fn main() -> ! {
     let _res5 = i2c.write(baseadr, &[0x12,0x0,0x0]);
     arduino_hal::delay_ms(1000);
     loop {
-        let _res2 = i2c.write(baseadr, &[0x12,0x00,0x00]);
+        let _res2 = i2c.write(baseadr, &[0x12,0x0f,0x0f]);
         arduino_hal::delay_ms(1000);
         let _res4 = i2c.write(baseadr, &[0x12,0xff,0xff]);
         arduino_hal::delay_ms(500);
